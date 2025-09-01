@@ -14,7 +14,7 @@ for i in new_list:
     sum_i+=i
     avg=(sum_i/len(new_list))
 
-print(sum_i,avg)
+print(sum_i,f"{avg:.1f}")
     
 
 
