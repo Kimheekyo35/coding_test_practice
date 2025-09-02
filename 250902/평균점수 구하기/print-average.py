@@ -6,4 +6,4 @@ for p in point_list:
     sum_p+=p
     avg=sum_p/len(point_list)
 
-print(avg)
+print(f"{avg:.1f}")
