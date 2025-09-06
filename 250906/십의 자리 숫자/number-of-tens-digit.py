@@ -7,5 +7,5 @@ for i in arr:
     i=i//10
     cnt_list[i]+=1
 
-for i in range(1,len(cnt_list)):
+for i in range(1,10):
     print(f"{i} - {cnt_list[i]}")
