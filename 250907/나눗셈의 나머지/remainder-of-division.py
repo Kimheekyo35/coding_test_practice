@@ -6,7 +6,7 @@ while a!=0:
     c=a%b
     a=a//b
     arr[c]+=1
-    if a==0:
+    if a==1:
         break
 
 sum_ele=0
