@@ -3,8 +3,8 @@ arr=[0]*(b)
 
 c=0
 while a!=0:
-    a=a//b
     c=a%b
+    a=a//b
     arr[c]+=1
     if a==0:
         break
