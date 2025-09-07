@@ -11,6 +11,6 @@ while a!=0:
 
 sum_ele=0
 for ele in arr:
-    sum_ele+=(ele*ele)
+    sum_ele+=(ele**2)
 
 print(sum_ele)
