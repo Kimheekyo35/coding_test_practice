@@ -17,9 +17,11 @@ while True:
 
     print(max_idx+1,end=' ')
 
+    #첫 번재 원소가 0이면 끝
     if max_idx==0:
         break
 
+    #max_idx보다 작은 index세기
     prev_max_idx=max_idx
 
             
