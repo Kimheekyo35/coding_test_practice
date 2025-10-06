@@ -6,9 +6,10 @@ idx = -1
 for i in range(len(input_str)-len(target_str)+1):
     if input_str[i:i+len(target_str)] == target_str :
         idx = i
+        break
 
 
 if idx != -1:
     print(idx)
 else:
-    print("-1")
+    print(idx)
