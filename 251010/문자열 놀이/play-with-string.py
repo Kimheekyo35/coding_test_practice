@@ -21,13 +21,7 @@ for _ in range(q_num):
         print(str1)
 
     elif num == 2:
-        str1 = list(str1)
-        new =[]
-        for elem in str1:
-            if elem == q1:
-                elem = q2
-                new.append(elem)
-            else:
-                new.append(elem)
-        str1 = "".join(new)
+        for i in range(len(str1)):
+            if str1[i] == q1:
+                str1 = str1[:i] + q2 + str1[i+1:]
         print(str1)
