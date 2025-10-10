@@ -1,6 +1,8 @@
 string = input()
+# for문 돌 때마다 갱신되므로 for문 밖에다가 정의해야됨
+list_str = list(string)
 for _ in range(len(string)-1):
-    list_str = list(string)
+    
     pop_idx = int(input())
 
 #     if pop_idx >= len(string):
@@ -19,7 +21,6 @@ for _ in range(len(string)-1):
         
     else:
         list_str.pop(pop_idx)
-        new_string = "".join
     
     arr = "".join(list_str)
     print(arr)
