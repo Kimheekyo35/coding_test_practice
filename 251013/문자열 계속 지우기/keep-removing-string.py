@@ -1,8 +1,6 @@
 A = input()
 B = input()
-import sys
 # Please write your code here.
-i = 0
 # while True:
 #     for j in range(len(B)-1):
 #         if A[i] + A[i+1] == B[j]+B[j+1]:
@@ -21,9 +19,8 @@ while True:
             A = A[:i] + A[i+2:]
             i = 0
         i += 1
-    else:
+    elif B not in A:
         break
-
     
 
 print(A)
