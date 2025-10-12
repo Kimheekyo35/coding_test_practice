@@ -7,7 +7,7 @@ B = input()
 #             A = A[:i] + A[i+2:]
 #     i += 1
 #     if i > (len(A)-2):
-#         break
+#         break by
 
 # print(A)
 
@@ -15,14 +15,17 @@ B = input()
 i = 0
 while True:
     if i<len(A)-1:
-        if B in A[i] + A[i+1]:
+        if B == A[i] + A[i+1]:
             A = A[:i] + A[i+2:]
             i = 0
-        i += 1
-    elif B not in A:
+        else:
+            i += 1
+    else:
         break
-    
 
 print(A)
+    
+
+
 
         
