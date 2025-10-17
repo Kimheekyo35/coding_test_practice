@@ -1,5 +1,5 @@
 string = input()
 
 for s in string:
-    if ord(s) >= 65:
+    if s.isalpha():
         print(s.upper(),end="")
