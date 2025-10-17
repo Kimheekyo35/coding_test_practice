@@ -1,5 +1,5 @@
 string = input()
 
 for s in string:
-    if ord(s) >= 76:
-        print(s.upper())
+    if ord(s) >= 72:
+        print(s.upper(),end="")
