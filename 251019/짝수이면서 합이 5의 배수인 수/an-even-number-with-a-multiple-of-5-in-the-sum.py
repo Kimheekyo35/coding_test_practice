@@ -4,7 +4,7 @@ n = int(input())
 
 def choose_num(n):
     sum_num = (n % 10) + (n // 10)
-    return n % 2 == 0 and sum_num % 2 == 0
+    return n % 2 == 0 and sum_num % 5 == 0
 
 def print_num(n):
     if choose_num(n):
