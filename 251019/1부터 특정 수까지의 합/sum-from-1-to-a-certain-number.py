@@ -5,8 +5,8 @@ n = int(input())
 def sum_num(n):
     result = 0
     for i in range(1,n+1):
-        result += (i//10)
+        result += i
 
-    return int(result)
+    return result//10
 
 print(sum_num(n))
