@@ -13,6 +13,9 @@ def month_day31(M, D):
             if D == i :
                 return True
 
+    elif M >= 13 or D >= 32:
+        return False
+    
     else:
         for i in range(1,31):
             if D == i:
