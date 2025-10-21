@@ -6,11 +6,12 @@ b = list(map(int, input().split()))
 
 def check_part(a,b):
 
-    for i in range(n1):
+    for i in range(n1-n2+1):
         list_a = a[i:(i+n2)]
         
         if list_a == b:
             return True
+
 
 if check_part(a,b):
     print("Yes")
