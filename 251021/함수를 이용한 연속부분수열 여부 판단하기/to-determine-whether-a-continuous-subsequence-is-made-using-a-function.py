@@ -6,8 +6,8 @@ b = list(map(int, input().split()))
 
 def check_part(a,b):
 
-    for i in range(1,len(a)-1):
-        list_a = a[i-1:(i-1)+len(b)]
+    for i in range(n1-1):
+        list_a = a[i:(i+n2)]
         
         if list_a == b:
             return True
@@ -16,4 +16,3 @@ if check_part(a,b):
     print("Yes")
 else:
     print("No")
-    
