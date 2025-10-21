@@ -4,11 +4,11 @@ M, D = map(int, input().split())
 
 def month_day31(M, D):
     s_n = str(M)
-    if M == ('1' or '3' or '5' or '7' or '8' or '10' or '11'):
+    if s_n == ('1' or '3' or '5' or '7' or '8' or '10' or '11'):
         for i in range(1,32):
             if D == i:
                 return True
-    elif M == '2':
+    elif s_n == '2':
         for i in range(1,29):
             if D == i :
                 return True
