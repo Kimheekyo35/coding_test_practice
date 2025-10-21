@@ -6,7 +6,7 @@ b = list(map(int, input().split()))
 
 def check_part(a,b):
 
-    for i in range(n1-1):
+    for i in range(n1):
         list_a = a[i:(i+n2)]
         
         if list_a == b:
