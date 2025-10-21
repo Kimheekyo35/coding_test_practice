@@ -14,7 +14,7 @@ def month_check(M,D):
         if day(D,max_d):
             return True
     elif M == 2:
-        max_d = 29
+        max_d = 28
         if day(D,max_d):
             return True
     
