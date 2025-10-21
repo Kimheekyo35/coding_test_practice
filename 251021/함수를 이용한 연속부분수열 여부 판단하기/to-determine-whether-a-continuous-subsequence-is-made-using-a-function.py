@@ -7,10 +7,11 @@ b = list(map(int, input().split()))
 def check_part(a,b):
     s_a = ""
     s_b = ""
+    
     for i in a:
-        s_a += str(i)
+        s_a += str(i) + " "
     for j in b:
-        s_b +=  str(j)
+        s_b += str(j) + " "
 
     if s_b in s_a:
         print("Yes")
