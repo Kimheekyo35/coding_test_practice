@@ -5,17 +5,15 @@ b = list(map(int, input().split()))
 # Please write your code here.
 
 def check_part(a,b):
-    s_a = ""
-    s_b = ""
+
+    for i in range(1,len(a)-1):
+        list_a = a[i-1:(i-1)+len(b)]
+        
+        if list_a == b:
+            return True
+
+if check_part(a,b):
+    print("Yes")
+else:
+    print("No")
     
-    for i in a:
-        s_a += str(i) + " "
-    for j in b:
-        s_b += str(j) + " "
-
-    if s_b in s_a:
-        print("Yes")
-    else:
-        print("No")
-
-check_part(a,b)
