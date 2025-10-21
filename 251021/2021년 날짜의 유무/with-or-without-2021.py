@@ -1,29 +1,34 @@
 M, D = map(int, input().split())
 
 # Please write your code here.
-
-def month_day31(M, D):
-    s_n = str(M)
-    if s_n == ('1' or '3' or '5' or '7' or '8' or '10' or '11'):
-        for i in range(1,32):
-            if D == i:
+def day(D,max_d):
+    if D <= 31:
+        for i in range(max_d+1):
+            if i == D:
                 return True
-    elif s_n == '2':
-        for i in range(1,29):
-            if D == i :
-                return True
+    return False
 
-    elif M >= 13 or D >= 32:
-        return False
+def month_check(M,D):
+    if M == 1 or M == 3 or M == 5 or M == 7 or M == 8 or M == 10 or M == 12:
+        max_d = 31
+        if day(D,max_d):
+            return True
+    elif M == 2:
+        max_d = 29
+        if day(D,max_d):
+            return True
     
+    elif M == 4 or M == 6 or M == 9 or M == 11:
+        max_d = 30
+        if day(D,max_d):
+            return True
     else:
-        for i in range(1,31):
-            if D == i:
-                return True
+        return False
+
 
     return False
 
-if month_day31(M,D):
+if month_check(M,D):
     print("Yes")
 else:
     print("No")
