@@ -20,7 +20,7 @@ def day(Y):
             return True
     return False
 
-    
+
 def check_day(Y,M,D):
     if M <= 12 and D <= 31:
         if M == 2:
@@ -28,7 +28,7 @@ def check_day(Y,M,D):
                 max_day = 29
             else:
                 max_day = 28
-        elif M in [1,3,5,7,10,12]:
+        elif M in [1,3,5,7,8,10,12]:
             max_day = 31
         else:
             max_day = 30
