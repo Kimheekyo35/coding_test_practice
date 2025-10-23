@@ -1,6 +1,6 @@
-n, m = map(int,input().split())
-arr = list(map(int,input().split()))
-queries = [tuple(map(int,input().split())) for _ in range(n)]
+n, m = map(int, input().split())
+arr = list(map(int, input().split()))
+queries = [tuple(map(int, input().split())) for _ in range(m)]
 
 # Please write your code here.
 
@@ -16,7 +16,3 @@ def sum_val():
         print(sum(val))
 
 sum_val()
-
-        
-
-        
