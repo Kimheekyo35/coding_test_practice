@@ -13,12 +13,12 @@ for _ in range(n):
     name, address, location = tuple(input().split())
     users.append(User(name,address,location))
 
-
-min_idx = ord("a")
+name_list= []
 for i in range(n):
-    if ord(users[i].name[0]) >= min_idx:
-        max_idx = i   
-    
-print("name",users[max_idx].name)
-print("addr",users[max_idx].address)
-print("city",users[max_idx].location)
+    name_list.append(users[i].name)
+revise_name = sorted(name_list)
+last_name = revise_name[-1]
+idx = name_list.index(last_name)
+print("name",users[idx].name)
+print("addr",users[idx].address)
+print("city",users[idx].location)
