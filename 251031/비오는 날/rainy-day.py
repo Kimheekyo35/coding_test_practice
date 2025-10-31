@@ -9,11 +9,15 @@ arr = [tuple(input().split()) for _ in range(n)]
 weather_list = [Weather(date, day, weather) for date, day, weather in arr]
 
 idx_list = []
-for i in range(n):
-    if weather_list[i].weather == "Rain":
+for i,text in enumerate(weather_list):
+    if text.weather == "Rain":
         idx_list.append(i)
-min_idx = min(idx_list)
-for idx in  idx_list:
-    if weather_list[min_idx].date > weather_list[idx].date:
-        min_idx = i
-print(weather_list[min_idx].date,weather_list[min_idx].day,weather_list[min_idx].weather)
+
+fix_idx = min(idx_list)
+for idx in idx_list:
+    if weather_list[fix_idx].date > weather_list[idx].date:
+        fix_idx = idx
+    
+print(weather_list[fix_idx].date,weather_list[fix_idx].day,weather_list[fix_idx].weather)
+
+    
