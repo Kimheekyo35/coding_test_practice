@@ -11,7 +11,7 @@ def calculate(a,b,c):
     fix_min = 11
     time_count = 0
 
-    if day > a and time > b and fix_min > c:
+    if day == 11 and (time > b or fix_min > c):
         return -1
     
     while True:
