@@ -15,13 +15,11 @@ def calculate(a,b,c):
         return -1
     
     while True:
-        time_count += 1
-        fix_min += 1
-        
         if day == a and time == b and fix_min == c:
             return time_count
             break
-        
+        time_count += 1
+        fix_min += 1
         if fix_min == 60:
             time += 1
             fix_min = 0
