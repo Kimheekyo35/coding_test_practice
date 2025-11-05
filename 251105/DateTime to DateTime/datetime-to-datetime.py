@@ -25,5 +25,7 @@ def calculate_day(a,b,c):
 #             day += 1
 #             time = 0
 # print(calculate(a,b,c))
-
-print(calculate_day(a,b,c)-calculate_day(11,11,11))
+if calculate_day(a,b,c) >= calculate_day(11,11,11):
+    print(calculate_day(a,b,c)-calculate_day(11,11,11))
+else:
+    print(-1)
