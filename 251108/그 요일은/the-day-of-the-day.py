@@ -16,12 +16,12 @@ def calculate_day(month,day):
 day_list = ['Mon','Tue','Web','Thu','Fri','Sat','Sun']
 
 if A in day_list:
-    index = day_list.index(A)
+    indx = day_list.index(A)
 
 diff = calculate_day(m2,d2) - calculate_day(m1,d1)
 count = 0
 while True:
-    if diff < index:
+    if diff < indx:
         break
     else:
         diff -= 7
