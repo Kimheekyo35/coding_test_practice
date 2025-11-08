@@ -13,7 +13,7 @@ def calculate_day(month,day):
 
     return total_day
 
-day_list = ['Mon','Tue','Web','Thu','Fri','Sat','Sun']
+day_list = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun']
 
 indx = day_list.index(A)
 
