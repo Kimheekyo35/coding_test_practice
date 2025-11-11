@@ -3,7 +3,7 @@ N, B = map(int, input().split())
 digit_list = []
 
 while True:
-    if N < 2:
+    if N < B:
         digit_list.append(N)
         break
     
