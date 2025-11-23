@@ -4,22 +4,21 @@ max_k = 200000
 
 origin = [0] * (max_k+1)
 cur = 100000
-black,white = 0,0
+black, white = 0, 0
 
 for num, direction in commands:
     num = int(num)
     if direction == "L":
-        while cur > cur-num:
-            cur -= 1
+        for _ in range(num):
             origin[cur] = 1
-        cur = cur - num + 1
-        print(cur)
+            cur -=1
+        cur += 1
     else:
-        while cur < cur+num:
+        for _ in range(num):
+            origin[cur] = 2
             cur += 1
-            # origin[cur] = 2
-        cur = cur + num - 1
-        print(cur)
+        cur -= 1
+
 for i in range(max_k+1):
     if origin[i] == 1: white += 1
     elif origin[i] == 2: black += 1
