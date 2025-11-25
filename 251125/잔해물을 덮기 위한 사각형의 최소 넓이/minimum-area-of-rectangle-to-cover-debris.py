@@ -30,7 +30,9 @@ for i in range(max_r+1):
 
 if cnt_1 > cnt_3 :
     print(cnt_1+cnt_3)
+#만약 1을 다 가리면 cnt_1값은 없어지므로 0이됨
+# 만약 1을 안 가리면 cnt_1값은 그대로 있음
 else:
-    print(0)
+    print(cnt_1)
 
 
