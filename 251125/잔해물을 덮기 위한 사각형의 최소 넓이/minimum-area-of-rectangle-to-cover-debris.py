@@ -28,5 +28,9 @@ for i in range(max_r+1):
         elif map_rec[i][j] == 3:
             cnt_3 += 1
 
-print(cnt_1+cnt_3)
+if cnt_1 > cnt_3 :
+    print(cnt_1+cnt_3)
+else:
+    print(0)
+
 
