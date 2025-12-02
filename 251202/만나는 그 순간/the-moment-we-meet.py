@@ -1,7 +1,7 @@
 n, m = tuple(map(int,input().split()))
 time_a, time_b = 1, 1
 
-offset = 1000
+offset = 1000000
 max_r = 2*offset
 
 list_a, list_b = [0]*(max_r+1), [0]*(max_r+1)
