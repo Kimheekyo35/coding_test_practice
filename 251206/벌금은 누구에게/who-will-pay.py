@@ -7,6 +7,8 @@ for s in student:
     for idx,cnt in enumerate(stud_cnt):
         if s == idx+1:
             stud_cnt[idx] += 1
+        if cnt == 3:
+            break
 
 answer = -1
 for stud in stud_cnt:
