@@ -1,16 +1,18 @@
 n, m, k = map(int, input().split())
-lit = set()
-ans, cnt = -1, 0
+count = {}          # number별 등장 횟수 저장
+ans = -1
 
-## 이 코드가 틀린 이유는 맨 처음에 들어온 것들이 cnt 0으로 찍히기 때문
 for _ in range(m):
     number = int(input())
-    if number in lit:
-        cnt += 1
+    
+    # number 등장 횟수 1 증가
+    if number in count:
+        count[number] += 1
     else:
-        lit.add(number)
-        cnt += 1
-    if cnt >= k:
+        count[number] = 1
+
+    # 이 number가 처음으로 k번 이상 등장했다면 정답
+    if count[number] >= k:
         ans = number
         break
 
