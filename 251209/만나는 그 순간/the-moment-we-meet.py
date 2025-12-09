@@ -1,5 +1,5 @@
 n, m = tuple(map(int,input().split()))
-num = 2000
+num = 2000000
 A_status = 1
 A_list = [0]*(num+1)
 
