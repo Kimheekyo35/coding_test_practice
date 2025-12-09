@@ -27,7 +27,7 @@ for _ in range(m):
         b_status += 1
 
 answer = -1
-for i in range(1,num):
+for i in range(1,A_status):
     if A_list[i] == b_list[i]:
         answer = i
         break
