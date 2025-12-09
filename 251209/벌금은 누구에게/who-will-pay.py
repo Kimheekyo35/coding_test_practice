@@ -8,7 +8,7 @@ for _ in range(m):
     else:
         lit.append(number)
     if cnt == k:
-        ans = k
+        ans = number
         break
 
 print(ans)
