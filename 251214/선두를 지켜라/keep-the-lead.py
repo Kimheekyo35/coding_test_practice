@@ -1,6 +1,6 @@
 n, m = map(int, input().split())
 
-limit = 1000
+limit = 1000000
 # Process A's movements
 a_list = [0] * (limit)
 b_list = [0] * (limit)
