@@ -25,8 +25,8 @@ for _ in range(m):
     
 cnt = 0
 
-for i in range(1,a_status-1):
-    if (a_list[i]-b_list[i]==0) and (a_list[i+1]-b_list[i+1]!=0):
+for i in range(1,a_status):
+    if (a_list[i]==b_list[i]) and (a_list[i+1]-b_list[i+1] != 0):
         cnt += 1
 
 print(cnt)
