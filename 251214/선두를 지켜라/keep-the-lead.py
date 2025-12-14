@@ -23,10 +23,18 @@ for _ in range(m):
         b_list[i] += b_list[i-1] + v
         b_status += 1
     
-cnt = 0
-
+leader, ans = 0, 0
 for i in range(1,a_status):
-    if (a_list[i]==b_list[i]) and (a_list[i+1]-b_list[i+1] != 0):
-        cnt += 1
+    if a_list[i] > b_list[i]:
+        # 기존 리더가 b인데 a가 더 큰거니까
+        if leader == 2:
+            ans += 1
+        # 리더를 a로 갱신
+        leader = 1
+    
+    elif a_list[i] < b_list[i]:
+        if leader == 1:
+            ans += 1
+        leader = 2
 
-print(cnt)
+print(ans)
