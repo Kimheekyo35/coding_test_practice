@@ -1,13 +1,21 @@
-n = int(input())
-list_a = [0]*(10000+1)
+offset = 100
+max_r = 200
 
-for _ in range(n):
-    x1, x2 = tuple(map(int,input().split()))
-    x1 += 100
-    x2 += 100
+n = int(input())
+
+segments = [
+    tuple(map(int,input().split()))
+    for _ in range(n)
+]
+list_a = [0] * (max_r + 1)
+
+for x1, x2 in segments:
+    x1, x2 = x1+offset, x2+offset
+
     for i in range(x1,x2):
         list_a[i] += 1
 
-print(max(list_a))
+max_num = max(list_a)
+print(max_num)
 
 
