@@ -6,6 +6,9 @@ for _ in range(m):
     number = int(input())
     num_list[number] += 1
 
+cnt = -1
 for i in num_list:
-    if i == k: print(num_list.index(k))
-    
+    if i == k: cnt = num_list.index(k)
+
+if cnt==-1: print(cnt)
+else: print(cnt)
