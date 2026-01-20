@@ -1,6 +1,6 @@
 n,m,k = tuple(map(int,input().split()))
 num_list = [0]*(n+1)
-cnt = 0
+cnt = -1
 
 for _ in range(m):
     number = int(input())
