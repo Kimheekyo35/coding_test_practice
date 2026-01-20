@@ -14,7 +14,7 @@ def in_range(x, y):
 def adjacent_cnt(x, y):
     cnt = 0
     for dx, dy in zip(dxs, dys):
-        nx, ny = x + dxs[dx], y+dys[dy]
+        nx, ny = x + dx, y + dy
         if in_range(nx,ny) and arr[nx][ny]==1:
             cnt += 1
     return cnt
