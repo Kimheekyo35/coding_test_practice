@@ -5,7 +5,7 @@ num_squ = [
 ]
 
 def loc(a,b):
-    return a>=0 and a<4 and b>=0 and b<4
+    return a>=0 and a<n and b>=0 and b<n
 
 dxs, dys = [0,1,0,-1],[1,0,-1,0]
 
