@@ -1,56 +1,45 @@
-N = int(input())
-moves = [tuple(input().split()) for _ in range(N)]
+# global -> 함수 밖에 있는 변수를 함수 안에서 쓰고 싶을 때 global
 
-dx, dy = [0,-1,0,1],[1,0,-1,0]
-time_at = 0
-sx, sy = 0, 0
+n = int(input())
 
-def loc(a,b):
-    return a == 0 and b == 0
+x, y = 0, 0
+
+dxs, dys = [1,-1,0,0],[0,0,1,-1]
+
+ans = -1
+
+elapsed_time = 0
+
+def move(move_dir, dist):
+    global x,y
+    global ans,elapsed_time
+
+    for _ in range(dist):
+        x, y = x+dxs[move_dir], y+dys[move_dir]
+
+        elapsed_time += 1
+
+        if x == 0 and y == 0:
+            ans = elapsed_time
+            return True
         
+    return False
 
-def find_loc(a, b, how, way,time_at):
-    for _ in range(how):
-        a += dx[way]
-        b += dy[way]
-        time_at += 1
-        if loc(a,b):
-            return a,b,time_at
-    return a,b,time_at
+for _ in range(n):
+    c_dir, dist = tuple(input().split())
+    dist = int(dist)
 
-def find_0_0():
-    global sx, sy
-    time_at = 0
+    if c_dir == 'E':
+        move_dir = 0
+    elif c_dir == 'W':
+        move_dir = 1
+    elif c_dir == 'S':
+        move_dir = 2
+    else:
+        move_dir = 3
 
-    for i in range(N):
-        dir = moves[i][0]
-        how = int(moves[i][1])
+    done = move(move_dir,dist)
+    if done:
+        break
 
-        if dir == "N":
-            sx,sy,time_at = find_loc(sx,sy,how,0,time_at)
-            
-        elif dir == "S":
-            sx,sy,time_at = find_loc(sx,sy,how,2,time_at)
-        
-        elif dir == "E":
-            sx,sy,time_at = find_loc(sx,sy,how,1,time_at)
-
-        else:
-            sx,sy,time_at = find_loc(sx,sy,how,3,time_at)
-
-        if sx == 0 and sy == 0:
-            return(time_at)
-
-if find_0_0():
-    print(find_0_0())
-else:
-    print(-1)
-
-
-
-
-
-
-        
-
-
+print(ans)
