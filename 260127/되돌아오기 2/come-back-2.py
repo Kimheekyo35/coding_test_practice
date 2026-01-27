@@ -20,10 +20,10 @@ for i in range(leng):
     else:
         x, y = x+dxs[curr_dir], y+dys[curr_dir]
     if x == 0 and y == 0:
-        flag = True
+        print(time_at)
+        flag=True
         break
 
-if flag:
-    print(time_at)
-else:
-    print(time_at)
+
+if flag==False:
+    print(-1)
