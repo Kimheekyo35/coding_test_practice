@@ -2,16 +2,12 @@ n = int(input())
 S = input()
 
 # Please write your code here.
-C_cnt = 0
-O_cnt = 0
-W_cnt = 0
-for i in S:
-    if i == "C":
-        C_cnt += 1
-    elif i == "O":
-        O_cnt += 1
-    else:
-        W_cnt += 1
+cnt = 0
 
-print(C_cnt*O_cnt*W_cnt)
-        
+for i in range(len(S)):
+    for j in range(i+1,len(S)):
+        for k in range(j+1,len(S)):
+            if (S[i]=="C" and S[j]=="O" and S[k]=="W"):
+                cnt += 1
+
+print(cnt)       
