@@ -1,5 +1,5 @@
 R, C = list(map(int,input().split()))
-arr = [list(map(str,input().split())) for _ in range(C)]
+arr = [nput().split() for _ in range(R)]
 
 cnt = 0
 
