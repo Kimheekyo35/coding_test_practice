@@ -7,46 +7,15 @@ a_sym, a_tem = input().split()
 b_sym, b_tem = input().split()
 c_sym, c_tem = input().split()
 
-sym_list = []
-
 a_tem, b_tem, c_tem = int(a_tem), int(b_tem),int(c_tem)
 
-if a_sym =="Y":
-    if a_tem >= 37:
-        sym_list.append("A")
+if a_sym == "Y" and a_tem >= 37:
+    if (b_sym == "Y" and b_tem >= 37) or (c_sym == "Y" and c_tem >= 37):
+        print("E")
     else:
-        sym_list.append("C")
+        print("N")
 else:
-    if a_tem >= 37:
-        sym_list.append("B")
+    if (b_sym == "Y" and b_tem >= 37) and (c_sym == "Y" and c_tem >= 37):
+        print("E")
     else:
-        sym_list.append("D")
-
-if b_sym == "Y":
-    if b_tem >= 37:
-        sym_list.append("A")
-    else:
-        sym_list.append("C")
-else:
-    if b_tem >=37:
-        sym_list.append("B")
-    else:
-        sym_list.append("D")
-
-if c_sym == "Y":
-    if c_tem >= 37:
-        sym_list.append("A")
-    else:
-        sym_list.append("C")
-else:
-    if c_tem >= 37:
-        sym_list.append("B")
-    else:
-        sym_list.append("D")
-
-# print(sym_list)
-
-if sym_list.count("A") >= 2:
-    print("E")
-else:
-    print("N")     
+        print("N")
