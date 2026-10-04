@@ -7,10 +7,31 @@ a, b, c = list(map(int,input().split()))
 # a > c > b -> c
 # b > c > a -> c
 
-if (a >= c and c >= b) or (b >= c and c >= a):
-    print(c)
-elif (b >= a and a >= c) or (c>=a and a>=b):
-    print(a)
+if a>b:
+    if b>c:
+        print(b)
+    elif c>a:
+        print(a)
+    # b<=c and c<=a
+    else:
+        print(c)
+
+# b >= a
 else:
-    print(b)
+    if a > c:
+        print(a)
+    elif c > b:
+        print(b)
+    else:
+        print(c)
+
+
+
+
+# if (a >= c and c >= b) or (b >= c and c >= a):
+#     print(c)
+# elif (b >= a and a >= c) or (c>=a and a>=b):
+#     print(a)
+# else:
+#     print(b)
 
