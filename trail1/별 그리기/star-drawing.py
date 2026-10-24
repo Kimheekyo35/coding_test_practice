@@ -1,0 +1,17 @@
+n = int(input())
+
+# Please write your code here.
+#1,2
+for i in range(1,n+1):
+    for _ in range(n-i):
+        print(" ",end="")
+    for _ in range(2*i-1):
+        print("*",end="")
+    print()
+# 1
+for i in range(n-1,0,-1):
+    for _ in range(n-i):
+        print(" ",end="")
+    for _ in range(2*i-1):
+        print("*",end="")
+    print()
