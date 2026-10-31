@@ -10,18 +10,74 @@ n = int(input())
 # i, j의 행렬 기준이 뭔지 모르겠음. -> j가 열, i는 행
 
 # i = 0,1
+# for i in range(n):
+#     for j in range(n):
+#         # j는 열
+#         if j%2 == 0:
+#             if i == 0:
+#                 print("*",end=" ")
+#             else:
+#                 print(" ",end=" ")
+#         else:
+#             if i<=j:
+#                 print("*",end=" ")
+#             else:
+#                 print(" ",end=" ")
+
+#     print()
+
+
+
+# 0 1,2,3
+# 1
+# 2
+# 3
 for i in range(n):
     for j in range(n):
-        # j는 열
-        if j%2 == 0:
+        # 열이 짝수일 때
+        if j % 2 == 0:
             if i == 0:
                 print("*",end=" ")
             else:
                 print(" ",end=" ")
+        # 열이 홀수 일 때
         else:
-            if i<=j:
+            if i<=j :
                 print("*",end=" ")
             else:
                 print(" ",end=" ")
 
+        
+        
+
+        
     print()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
